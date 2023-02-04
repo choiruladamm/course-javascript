@@ -1,0 +1,1 @@
+alert ("Helo External File JS")

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dasar 2</title>
+</head>
+<body>
+    
+   
+     <script>
+
+        //  <!-- Fungsi alert() adalah fungsi untuk menampilkan jendela dialog. Fungsi sebenarnya berada pada objek window. -->
+        alert("hello world")
+        function sayHello(){
+            alert("hello");
+        }
+
+        // Menggunakan Fungsi document.write()
+        // Objek document adalah objek yang mewakili dokumen HTML di dalam Javascript.
+        document.write("<h1>hello world</h1>");
+        document.write("<hr>");
+        document.write("<p>learn javascript</p>");
+        document.write("di <b>petanikode</b>");
+
+        // inner html
+
+        // create objek elemen
+        var hasil =  document.getElementById("hasil-output");
+
+        // menampilkan output ke elemen hasil
+        hasil.innerHTML = "<p>learn javascript</p>"
+
+
+     </script>
+     
+     <br><br>
+     <button onclick="sayHello()">Klik me</button>
+     
+     <br><br>
+     <div id="hasil-output"></div>
+
+
+     <!-- RINGKASAN DASAR 2 -->
+     <!-- fungsi console.log() untuk menampilkan output ke console javascript -->
+     <!-- fungsi alert() untuk menampilkan output ke jendela dialog -->
+     <!-- fungsi document.write() untuk menulis output ke dokumen HTML -->
+     <!-- atribut innerHTML untuk menampilkan output ke elemen HML yang lebih spesifik -->
+
+</body>
+</html>

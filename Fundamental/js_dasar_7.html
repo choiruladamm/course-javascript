@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percabangan | JS Dasar 7</title>
+  </head>
+  
+  <body>
+    <script>
+      // PERCABANGAN IF
+      // cara 1
+      // var totalBelanja = prompt('total belanja', 0);
+
+      // if(totalBelanja >= 100000) {
+      //     document.write('<h2>Selamat anda mendapat bonus</h2>')
+      // }
+
+      // document.write('<p>Thanks sudah belanja</p>')
+
+      // cara 2
+      // var totalBelanja = prompt('total belanja');
+
+      // if(totalBelanja >= 100000) {
+      //     document.write('<h2>Selamat anda mendapat bonus</h2>')
+      // document.write('<p>Thanks sudah belanja</p>')
+      // } else if (totalBelanja <= 100000) {
+      //     document.write('<p>Thanks sudah belanja</p>')
+      // }
+
+      // PERCABANGAN IF/ELSE
+      // var password = prompt('Password:')
+
+      // if (password == 'kopi') {
+      //     document.write('<h2>Welcome Bossss</h2>')
+      // } else {
+      //     document.write('<p> pw salah, cobak en maneh...')
+      // }
+
+      // document.write('<p> thanksss sudah menggunakan app ini</p>')
+
+      // PERCABANGAN IF/ELSE/IF
+      // var nilai = prompt("Inputkan nilai akhir:");
+      // var grade = "";
+
+      // if (nilai >= 90){
+      //     grade = "A"
+      // } else if(nilai >= 80) {
+      //     grade = "B+"
+      // } else if(nilai >= 70) {
+      //     grade = "B"
+      // } else if(nilai >= 60) {
+      //     grade = "C+"
+      // } else if(nilai >= 50) {
+      //     grade = "C"
+      // } else if(nilai >= 40) {
+      //     grade = "D"
+      // } else if(nilai >= 30) {
+      //     grade = "E"
+      // } else {
+      //     grade = "F";
+      // }
+      // document.write(`<p>Grade anda: ${grade}</p>`);
+
+      // PERCABANGAN SWITCH CASE
+      // cara 1
+      // var jawab = prompt("Kamu beruntung! Silahkan pilih hadiahmu dengan memasukan angka 1 sampai 5");
+      // var hadiah = "";
+
+      // switch(jawab){
+      //     case "1":
+      //         hadiah = "Tisu";
+      //         break;
+      //     case "2":
+      //         hadiah = "1 Kotak Kopi";
+      //         break;
+      //     case "3":
+      //         hadiah = "Sticker";
+      //         break;
+      //     case "4":
+      //         hadiah = "Minyak Goreng";
+      //         break;
+      //     case "5":
+      //         hadiah = "Uang Rp 50.000";
+      //         break;
+      //     default:
+      //         document.write("<p>Opps! anda salah pilih</p>");
+      // }
+      // if(hadiah === ""){
+      //     document.write("<p>Kamu gagal mendapat hadiah</p>");
+      // } else {
+      //     document.write("<h2>Selamat kamu mendapatkan " + hadiah + "</h2>");
+      // }
+
+      // cara 2
+      //   var nilai = prompt("input nilai");
+      //   var grade = "";
+
+      //   switch (true) {
+      //     case nilai < 90:
+      //       grade = "A";
+      //       break;
+      //     case nilai < 80:
+      //       grade = "B+";
+      //       break;
+      //     case nilai < 70:
+      //       grade = "B";
+      //       break;
+      //     case nilai < 60:
+      //       grade = "C+";
+      //       break;
+      //     case nilai < 50:
+      //       grade = "C";
+      //       break;
+      //     case nilai < 40:
+      //       grade = "D";
+      //       break;
+      //     case nilai < 30:
+      //       grade = "E";
+      //       break;
+      //     default:
+      //       grade = "F";
+      //   }
+
+      // PERCABANGAN TERNARY
+      //   var question = prompt('apakah ibukota jakarta ada di indonesia???');
+
+      //   var answer = (question.toUpperCase() == 'IYA') ? 'Benar': 'Salah';
+
+      //   document.write(`jawaban anda: <b>${answer}`)
+
+      // PERCABANGAN BERSARANG/NESTED
+      //   var userName = prompt('Username: ');
+      //   var Password = prompt('Password: ');
+
+      //   if(userName == 'adam'){
+      //     if(Password == '123') {
+      //         document.write('<h2> selamat datang masze');
+      //     } else {
+      //         document.write('<h3> salahhhhhh');
+      //     }
+      //   } else {
+      //     document.write('<h1> awakmu gurung daftar')
+      //   }
+
+      // versi simple
+      var userName = prompt("Username: ");
+      var Password = prompt("Password: ");
+
+      if (userName == 'adam' && Password == '123'){
+        document.write("<h2>Selamat datang pak bos!</h2>");
+      } else {
+        document.write("<p>Password salah, coba lagi!</p>");
+      }
+
+    </script>
+  </body>
+</html>
