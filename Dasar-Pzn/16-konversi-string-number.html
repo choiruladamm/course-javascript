@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi String & Number</title>
+  </head>
+  <body>
+    <script>
+      const value1 = parseInt("1.1");
+      const value2 = 1;
+      const sum = value1 + value2;
+
+      document.writeln(`<p>${sum}</p>`);
+      // parsing data / konversi data
+      document.writeln(`<p>${parseInt("1.9")}</p>`);
+      document.writeln(`<p>${parseFloat("1.9")}</p>`);
+      document.writeln(`<p>${Number("1.9")}</p>`);
+
+      const a = 1;
+      const b = 1;
+      const total = a.toString() + b.toString();
+      document.writeln(`<p>${total}</p>`);
+
+      document.writeln(`<p>${parseInt("1.1salah")}</p>`);
+      document.writeln(`<p>${parseFloat("1.1salah")}</p>`);
+      
+      document.writeln(`<p>${Number("1.1salah")}</p>`);
+      document.writeln(`<p>${Number("1.1eko")}</p>`);
+
+      const valueSatu = 1;
+      const valueDua = Number('1salah'); //Nan
+      const tambah = valueSatu + valueDua;
+
+      document.writeln(`<p>${tambah}</p>`);
+      document.writeln(`<p>${isNaN(2)}</p>`);
+
+    </script>
+  </body>
+</html>
