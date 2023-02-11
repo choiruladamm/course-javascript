@@ -10,9 +10,22 @@
     <script>
       // cara menambah data ke dalam array
       const names = [];
-      names.push("Choirul");
-      names.push("Adam", 'James');
 
+      // add data array
+      names.push("Choirul");
+      names.push("Adam", "James");
+
+      // ubah data array
+      names[0] = "Axell";
+
+      console.table(names);
+
+      // delete data
+      delete names[2];
+      console.table(names);
+
+      // tambah lagi data yang sudah dihapus
+      names[2] = "Tambah Lagi";
       console.table(names);
     </script>
   </body>
