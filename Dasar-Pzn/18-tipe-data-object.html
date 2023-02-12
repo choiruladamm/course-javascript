@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+
+    <!-- Tipe Data Number -->
+    <div id="hasil"></div>
+
+    <!-- Tipe Data String -->
+    <div id="string-hasil"></div>
+
+    <!-- Tipe Data Array -->
+    <div id="array-hasil"></div>
+
+    <!-- Tipe Data Object -->
+    <div id="object-hasil"></div>
+
+    <script>
+
+      // Malas Ngoding
+      // Show Data
+      var angka = 9910;
+      document.getElementById("hasil").innerHTML = angka;
+
+      // Show Data
+      var kalimat = "Hello guys, welkam to the klab";
+      document.getElementById("string-hasil").innerHTML = kalimat;
+
+      // Show Data
+      var dataHewan = ["Kucing", "Macan", "Singa"];
+      document.getElementById("array-hasil").innerHTML = dataHewan[2];
+
+      // Show Data
+      let human = {
+        name: "Choirul Adamm",
+        address: "Sidoarjo",
+        age: "20",
+        job: "Editing",
+      };
+      document.getElementById("object-hasil").innerHTML = "My name is " + human.name + " i'am living in " + human.address + "  ";
+
+      // Programmer Zaman Now
+      // const orang = {
+      //   nama: 'Choirul Adamm',
+      //   alamat: 'Indonesia',
+      //   umur: '30',
+      // };
+
+      // // orang["nama"] = "Choirul Adamm";
+      // // orang["alamat"] = "Indonesia";
+      // // orang["umur"] = 23;
+
+      // // console.table(orang);
+
+      // // delete orang["umur"];
+      // // console.table(orang);
+
+      // console.info(`Nama: ${orang.nama}`);
+      // console.info(`Alamat: ${orang.alamat}`);
+    </script>
+  </body>
+</html>
