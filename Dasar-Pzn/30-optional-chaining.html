@@ -15,17 +15,24 @@
         country: "Adam",
       }
     };
+
+    const adventurer = {
+      name: 'Alice',
+      cat: {
+        name: 'Dinah',
+      }
+    };
     
     // pengecekan nullish using optional chaining
-    let country = human?.address?.country;
+    let country = human?.address?.country; // Adam
+    let testing = adventurer?.dog?.namel // undefined
 
     // pengecekan cara akses data undefined / null (tidak direkomendasikan)
     // if (human.address !== undefined && human.address !== null) {
     //   country = human.address.country;
     // }
-    document.writeln(`SUKSES`);
-    document.writeln(`${country}`);
-    document.writeln(`SUKSES`);
+    document.writeln(`<p>${country}</p>`);
+    document.writeln(`<p>${testing}</p>`);
 
   </script>
   
