@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // jika nilai nya truthy || falsey maka hasilnya diambil paling kiri
+      // jika nilai nya falsey || truthy maka hasilnya diambil paling kanan
+      console.log("Hello" || ""); // Hello
+      console.log("" || []); // []
+      console.log("0" || "NOL"); // 0
+      console.log(undefined || "NOL"); // NOL
+      console.log(undefined || null); // null
+
+      // contoh studi kasus pada operator object
+      const person = {
+        name: "",
+        home: "Grinting",
+      };
+
+      let hasil = person.name || person.home;
+      console.log(hasil);
+
+      // Hello
+      console.log("Hello" && "hello"); // ""
+      console.log("" && []); // ""
+      console.log("0" && "NOL"); // NOL
+      console.log(undefined && "NOL"); // undefined
+      console.log(undefined && null); // undefined
+      
+    </script>
+  </body>
+</html>
