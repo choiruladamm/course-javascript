@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For Loop</title>
   </head>
+
+  <button onclick="perulangan()">Proses</button>
+
+  <div id="hasil"></div>
+
   <body>
-
     <script>
+      // // latihan youtube programmer zaman now
+      // for (let counter = 2; counter <= 10; counter++) {
+      //   document.writeln(`<p>Perulangan ke-${counter}</p>`);
+      // }
 
-      let counter = 1;
-
-      for (; counter <= 10;) {
-        document.writeln(`<p>Perulangan ke-${counter}</p>`);
-        counter++;
+      // Latihan web malasngoding.com
+      function perulangan() {
+        var text = "";
+        var x;
+        for (x = 0; x <= 10; x++) {
+          text += `<p>Cobak ${x}</p>`;
+        }
+        document.getElementById("hasil").innerHTML = text;
       }
-
     </script>
-
   </body>
 </html>
