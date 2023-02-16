@@ -10,16 +10,26 @@
 
   <script>
 
-    let counter = 1;
+    // break
+    // let counter = 1;
 
-    while(true) {
-      document.writeln(`<p>Perulangan ke-${counter}</p>`);
-      counter++;
+    // while(true) {
+    //   document.writeln(`<p>Perulangan ke-${counter}</p>`);
+    //   counter++;
 
-      if(counter > 10) {
-        break;
+    //   if(counter > 10) {
+    //     break;
+    //   }
+    // }
+
+    // continue genap saja
+     for (let i = 1; i<= 100; i++) {
+      if (i % 2 === 0) {
+        continue;
       }
-    }
+
+      document.writeln(`<p>Perulangan ke-${i}</p>`);
+     }
 
   </script>
   
