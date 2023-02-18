@@ -10,7 +10,7 @@
 
   <script>
 
-    // for in di project
+    // for in di object
     // const person = {
     //   firstName: "Choirull",
     //   middleName: "Adam",
@@ -21,13 +21,31 @@
     //   document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
     // }
 
+    // for in di object
+    const animal = {
+      animalOne: "Harimau",
+      animalTwo: "Singa",
+      animalThree: "Ular",
+    };
+
+    for (const animalBuas in animal) {
+      document.writeln(`<p>${animalBuas} : ${animal[animalBuas]}</p>`);
+    }
 
     // for in di array
-    const names = ["Choirul", "Adam", "James"];
+    const home = ["Meja", "Pintu", "Kamar"];
 
-    for (const property in names) {
-      document.writeln(`<p>Property Array ${property} : ${names[property]}</p>`);
+    for (const perabotan in home) {
+      document.writeln(`<p>${perabotan} : ${home[perabotan]}</p>`);
     }
+
+
+    // for in di array
+    // const names = ["Choirul", "Adam", "James"];
+
+    // for (const property in names) {
+    //   document.writeln(`<p>Property Array ${property} : ${names[property]}</p>`);
+    // }
 
   </script>
   
