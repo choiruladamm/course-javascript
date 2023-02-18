@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      // without with statement
+      const home = {
+        propertySatu: "Kamar",
+        propertyDua: "Dapur",
+        propertyTiga: "Halaman",
+      };
+
+      console.log(home.propertySatu);
+      console.log(home.propertyDua);
+      console.log(home.propertyTiga);
+
+      // using with statement
+      const person = {
+        namaSatu: "Adam",
+        namaDua: "Choirul",
+        namaTiga: "Axell",
+      };
+
+      with (person) {
+        console.log(namaSatu);
+        console.log(namaDua);
+        console.log(namaTiga);
+      }
+    </script>
+  </body>
+</html>
