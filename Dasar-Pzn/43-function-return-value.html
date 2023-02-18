@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functin Return Value</title>
+  </head>
+  <body>
+    <script>
+      // function return value
+      // create function with parameter and return value
+      function sayHello(firstName, lastName) {
+        const say = `Hello ${firstName} ${lastName}`;
+        return say;
+      }
+
+      // call/memanggil function dan menangkap return valuenya
+      const result = sayHello("Choirull", "Adamm");
+      document.writeln(`<p>${result}</p>`);
+
+      // funtion dengan return value lebih dari satu
+      function getFinalValue(value) {
+        if (value > 90) {
+          return "A";
+        } else if (value > 80) {
+          return "B";
+        } else if (value > 70) {
+          return "C";
+        } else if (value > 60) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      const finalValue = getFinalValue(80);
+      document.writeln(`${finalValue}`);
+    </script>
+  </body>
+</html>
