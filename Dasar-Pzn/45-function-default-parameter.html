@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Default Parameter</title>
+  </head>
+  <body>
+
+    <script>
+
+      // default paramter: jika parameter di fuction tidak di isi value nya, maka akan di set undefined, atau kita isi senduri default paramternya.
+      function register(name, gender = "UNKNOWN") {
+        console.log(name);
+        console.log(gender);
+      }
+
+      register("Adamm", "Laki-Laki");
+      register("Axell");
+      register("James", undefined);
+
+    </script>
+
+  </body>
+</html>
