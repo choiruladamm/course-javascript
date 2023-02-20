@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymous Function</title>
+  </head>
+  <body>
+
+    <script>
+
+      // contoh anonymous function di dalam variabel
+      let say = function (name) {
+        console.log(`Hello ${name}`);
+      }
+
+      say('Gemini');
+
+      // contoh anonymous function di dalam parameter
+      function giveMeName(callback) {
+        callback("Axell");
+      }
+
+      giveMeName(function(name){
+        console.log(`Hi ${name}`)
+      });
+
+    </script>
+
+  </body>
+</html>
