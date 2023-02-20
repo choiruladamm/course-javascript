@@ -44,7 +44,13 @@
       function giveMeName(callback) {
         callback('Pisces');
       }
+      
+      // versi anonymous function
+      giveMeName(function(name) {
+        console.log(`Hello ${name}`)
+      });
 
+      // versi arrow function
       giveMeName((name) => console.log(`Hello ${name}`));
       
     </script>
