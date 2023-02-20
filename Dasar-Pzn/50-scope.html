@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+
+    <script>
+
+      // global scope variabel
+      let counter = 0;
+
+      // global scope function
+      function hitMe(){
+        // local scope hitMe
+        counter++;
+      }
+
+      // global scope function
+      function other(){
+        // local scope other
+        let tambah = 0;
+      }
+
+      hitMe();
+      hitMe();
+      hitMe();
+      hitMe();
+      hitMe();
+
+      console.log(counter);
+      // console.log(tambah); // error, undefined variabel, karna mengkses local scope di global
+
+      // demo akses local scope di global
+      function first(){
+        let firstVariable = "First";
+        
+        function other() {
+          console.log(firstVariable);
+        }
+
+        other();
+      }
+
+      function second(){
+        let secondVariable = "Second"; 
+      }
+
+      first();
+      second();
+
+      // console.log(firstVariable);
+      // console.log(secondVariable);
+
+    </script>
+
+  </body>
+</html>
