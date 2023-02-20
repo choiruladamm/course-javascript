@@ -7,13 +7,33 @@
     <title>Rest Parameter</title>
   </head>
   <body>
-
     <script>
-
       // rest parameter
-      
+      function sum(name, ...data) {
+        let total = 0;
+        for (item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} = ${total}</p>`);
+        // console.log(`Total ${name} = ${total}`);
+      }
 
+      sum("Lion", 90, 90, 90, 90, 90, 90);
+      sum("Tiger", 90, 90, 90, 90, 90, 90);
+      sum("Mouse", 90, 90, 90, 90, 90, 90);
+
+      const array = [100, 10000, 3, 9, 8109];
+      sum("Adam", ...array);
+
+      // rest parameter versi lama / argument
+      function oldSum() {
+        let total = 0;
+        for (argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>Total old argument = ${total}</p>`);
+      }
+      oldSum(90,90,90,90,9,09,0,9);
     </script>
-
   </body>
 </html>
