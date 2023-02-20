@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrow Function</title>
-</head>
-<body>
-
-  <script>
-
-    /*
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      /*
     Limitasi using arrow function
     - tidak memiliki fitur arguments object (walaupun argument sudah tidak direkomendasikan / gunakan saja rest paramater)
     - tidak bisa menggunakan function generator
@@ -18,7 +16,37 @@
     - tidak bisa mengakses super
     */
 
-  </script>
-  
-</body>
+      // arrow function mirip dengan anonymous function yang didalam variabel
+
+      // arrow function using block
+      const sayHello = (name) => {
+        const say = `Hello ${name}`;
+        console.log(say);
+      };
+
+      // arrow function without block
+      const sayHome = (pintu) => console.log(pintu);
+
+      sayHello("Gemini");
+      sayHome("Pintu Kamar Mandi");
+
+      // arrow function with return value
+      const sayAnimal = (buas, tidakBuas) => buas + tidakBuas; 
+
+      console.log(sayAnimal(10,10));
+
+      // arrow function tanpa kurung parameter
+      const saySchools = student => console.log(`Hello ${student}`);
+
+      saySchools('Amida');
+
+      // arror function sebagai parameter
+      function giveMeName(callback) {
+        callback('Pisces');
+      }
+
+      giveMeName((name) => console.log(`Hello ${name}`));
+      
+    </script>
+  </body>
 </html>
