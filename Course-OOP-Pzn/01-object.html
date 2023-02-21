@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      // create constructor function
+      function Person() {
+        // create property pada constructor function
+        this.firstName = '';
+        this.lastName = '';
+      }
+
+      // create object
+      const james = new Person();
+      const axe = new Person();
+
+      console.log(james);
+      james.firstName = "Choirul";
+      james.lastName = "Adam";
+
+      console.log(axe);
+      axe.firstName = "James";
+      axe.lastName = "Bond";
+    </script>
+  </body>
+</html>
