@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Variabel</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variabel</title>
+  </head>
+  <body>
+    <h1>JavaScript Variables</h1>
 
-  <h2>Learn JS</h2>
-  <h4 id="demo"></h4>
+    <p>You can declare many variables in one statement.</p>
 
-  <script>
-    const pi = 3.14;
-    let person = 'James';
-    let human = 'Lion';
+    <p id="demo"></p>
 
-    document.getElementById('demo').innerHTML = `${pi}<br>${person}<br>${human}`;
-  </script>
-  
-</body>
+    <script>
+      let person = "John Doe",
+        carName = "Volvo",
+        price = 200;
+      document.getElementById("demo").innerHTML = carName;
+    </script>
+  </body>
 </html>
