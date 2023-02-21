@@ -1,16 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destructuring</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      // destructuring adalah cara untuk pemanggilan data pada array tanpa perlu memikirkan indexnya, dan data nya bisa dimasukkan ke dalam variabel
 
-  <script>
-    
-  </script>
-  
-</body>
+      {
+        // contoh destructuring pada array
+        // const names = ["Choirul", "Adam", "Axell{, "Gemini", "Banyak Cabang"];
+        // let [firstName, middleName, lastName, ...others] = names;
+        // console.log(firstName);
+        // console.log(middleName);
+        // console.log(lastName);
+        // console.log(others);
+      }
+
+      {
+        // contoh destructuring pada object
+        const person = {
+          firstName: "Choirul",
+          lastName: "Adam",
+          address: {
+            street: "Undefined",
+            city: "Sidoarjo",
+            country: "Indonesia",
+          },
+          hobby: "Baca Webtoon",
+          Github: "github.com/choiruladamm",
+        };
+
+        let {
+          firstName,
+          lastName,
+          address: { street, city, country },
+          ...others
+        } = person;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(city);
+        console.log(street);
+        console.log(country);
+        console.log(others);
+      }
+
+      {
+        // destructuring di function parameter (1) (object)
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.log(firstName);
+          console.log(middleName);
+          console.log(lastName);
+        }
+
+        const person = {
+          firstName: "Choirul",
+          middleName: "Adamm",
+          lastName: "Axell",
+        };
+
+        displayPerson(person);
+      }
+
+      {
+        // destructuring di function parameter (2) (array)
+        function sum([first, second]) {
+          // (array)
+          return first + second; // array[0] + array[1]
+        }
+
+        console.log(sum([20, 10]));
+        console.log(sum([20, 100000000]));
+        console.log(sum([20, 10]));
+      }
+
+      {
+        // default value destructuring array
+        const names = ["Adam", "Axell"];
+        const [firstName, middleName, lastName = "Choirull"] = names;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      {
+        // default value destructuring object
+        const person = {
+          firstName: "Choirul",
+          middleName: "Adamm",
+        };
+        const { firstName, middleName, lastName = "Choirull" } = person;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      {
+        // default value destructuring object dan mengganti nama property
+        const person = {
+          firstName: "Choirul",
+          middleName: "Adamm",
+        };
+        const { firstName: namaDepan, middleName: namaTengah, lastName: namaBelakang = "Choirull" } = person;
+
+        console.log(namaDepan);
+        console.log(namaTengah);
+        console.log(namaBelakang);
+      }
+    </script>
+  </body>
 </html>
