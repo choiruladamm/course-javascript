@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter & Setter</title>
+  </head>
+  <body>
+
+    <script>
+
+      // Getter & Setter
+
+      const person = {
+        firstName: "Choirul",
+        lastName: "Adam",
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName(val) {
+          // create function supaya tidak mengganti properti satu persatu
+          // di split dulu menggunakan spasi, lalu di ubah menjadi array tiap spasinya
+          const array = val.split(" ");
+          this.firstName = array[0];
+          this.lastName = array[1];
+        }
+      }
+      
+      person.fullName = "Choirul Adam";
+      console.table(person);
+      
+      person.fullName = "Gemini BanyakCabang";
+      console.table(person);
+      
+      person.fullName = "Axell James";
+      console.table(person);
+      // person.firstName = "Gemini";
+      // person.lastName = "Banyak Cabang";
+      // otomatis memanggil full name seperti mengakses data object
+
+    </script>
+
+  </body>
+</html>
