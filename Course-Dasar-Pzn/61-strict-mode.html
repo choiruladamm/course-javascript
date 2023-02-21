@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict Mode</title>
+  </head>
+  <body>
+    <script>
+
+      // direkomendasikan selalu menggunakan stric mode karena akan tau kode kode mana saja yang sudah tidak direkomendasikan 
+      function useStrictMode() {
+        "use strict";
+        const animal = {
+          buas: "Lion",
+        }
+
+        with (animal) {
+          console.log(buas);
+        }
+      }
+
+      useStrictMode();
+    </script>
+  </body>
+</html>
