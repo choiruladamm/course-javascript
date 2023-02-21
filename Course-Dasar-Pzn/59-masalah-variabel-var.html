@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masalaah pada variabel var</title>
+  </head>
+  <body>
+    <script>
+      // global scope
+      let i = 20;
+
+      for (let i = 0; i < 10; i++) {
+        // local scope
+        document.write(`<p>Local ${i}</p>`);
+      }
+
+      document.write(`<p>Local ${i}</p>`);
+      
+
+    </script>
+  </body>
+</html>
