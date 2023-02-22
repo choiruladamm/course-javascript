@@ -11,7 +11,7 @@
       function Employee(firstName) {
         this.firstName = firstName;
         this.sayHello = function (name) {
-          console.log(`Hello ${name}, my name is ${firstName}`);
+          console.log(`Hello ${name}, my name is ${this.firstName}`);
         }
       }
 
@@ -19,6 +19,9 @@
         Employee.call(this, firstName);
         this.lastName = lastName;
       }
+
+      const james = new Manager ("Choirul", "Axell");
+      console.log(james)
     </script>
   </body>
 </html>
