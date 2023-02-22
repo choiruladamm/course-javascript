@@ -9,23 +9,25 @@
   <body>
     <script>
       // create constructor function
-      function Person() {
+      function Person(firstName, lastName) {
         // create property pada constructor function
-        this.firstName = '';
-        this.lastName = '';
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.log(`Hello ${name}, my name is ${this.firstName}`);
+        }
       }
 
       // create object
-      const james = new Person();
-      const axe = new Person();
+      const james = new Person("John", "Doe");
+      james.sayHello("Budi")
+
+      const axe = new Person("John", "Doe");
+      axe.sayHello("Budi")
 
       console.log(james);
-      james.firstName = "Choirul";
-      james.lastName = "Adam";
-
       console.log(axe);
-      axe.firstName = "James";
-      axe.lastName = "Bond";
+
     </script>
   </body>
 </html>
