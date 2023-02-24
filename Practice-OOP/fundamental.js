@@ -1,48 +1,45 @@
 //** */ OBJECT
-const barang = {
-  nama: "Lenovo Thinkpad x230",
-  harga: 2399999,
-  warna: "Putih",
-  berat: "2kg",
-  detail: function () {
-    return this.nama + " " + this.harga;
-  },
-};
+// const barang = {
+//   nama: "Lenovo Thinkpad x230",
+//   harga: 2399999,
+//   warna: "Putih",
+//   berat: "2kg",
+//   detail: function () {
+//     return this.nama + " " + this.harga;
+//   },
+// };
 
-console.log(barang.detail);
-document.writeln(`${barang.berat}`);
+// console.log(barang.detail);
+// document.writeln(`${barang.berat}`);
 
 // Disebut properti ketika value atau nilainya bukan function dan disebut method ketika valuenya adalah sebuah function.
 // Value dari sebuah property bisa apa aja.
 // Bisa data primitif, bisa function, atau bisa objek itu sendiri.
 
-
-
 //** */ FUNCTION CONSTRUCTOR
 // Biasanya untuk membedakan function contructor dengan function declaration biasa adalah dengan memakai huruf besar pada kata pertama nama function tersebut.
 
-function Person() {} // function constructor
-function person() {} // function deklaration biasa
+//function Person() {} // function constructor
+//function person() {} // function deklaration biasa
 
-{
-  function Barang(name, price) {
-    this.name = name;
-    this.price = price;
-    this.detail = function () {
-      return `${this.name} ${this.price}`;
-    };
-  }
+// {
+//   function Barang(name, price) {
+//     this.name = name;
+//     this.price = price;
+//     this.detail = function () {
+//       return `${this.name} ${this.price}`;
+//     };
+//   }
 
-  const barang1 = new Barang("Lenovo", "10 jt");
-  console.log(barang1);
+//   const barang1 = new Barang("Lenovo", "10 jt");
+//   console.log(barang1);
 
-  const barang2 = new Barang("Asus", "15 jt");
-  console.log(barang2);
-}
+//   const barang2 = new Barang("Asus", "15 jt");
+//   console.log(barang2);
+// }
 
 // Sebuah objek baru yang di buat dari sebuah constructor disebut sebagai instance.
 // Barang1, barang2, adalah instance dari Barang.
-
 
 //** */ CLASSES
 // Class adalah salah satu fitur baru yang di perkenalkan di javascript versi 2015 atau ES6.
@@ -51,24 +48,24 @@ function person() {} // function deklaration biasa
 
 // Perlu di catat bahwa di javascript, class sebenarnya adalah sebuah function namun dengan sintax yang berbedah.
 
-class Barang {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
+// class Barang {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//   }
 
-  details() {
-    return `${this.name} (${this.price}`;
-  }
-}
+//   details() {
+//     return `${this.name} (${this.price}`;
+//   }
+// }
 
-const barangSatu = new Barang("Dell", 200000);
-const barangDua = new Barang("Robot", 300000);
-const barangTiga = new Barang("MSI", 400000);
+// const barangSatu = new Barang("Dell", 200000);
+// const barangDua = new Barang("Robot", 300000);
+// const barangTiga = new Barang("MSI", 400000);
 
-console.log(barangSatu);
-console.log(barangDua);
-console.log(barangTiga);
+// console.log(barangSatu);
+// console.log(barangDua);
+// console.log(barangTiga);
 
 //** */ THIS KEYWORD
 
@@ -81,7 +78,6 @@ console.log(barangTiga);
 // Jika this di dalam sebuah function maka ia merujuk pada global objek atau window.
 
 // Dalam kasus function constructor dan class maka keyword this ini mengacu pada objek instannya.
-
 
 //** */ PRIVATE, PUBLIC PROPERTIES AND METHODS
 
@@ -98,8 +94,38 @@ console.log(barangTiga);
 
 // EXAMPLE
 
-{
-  function Barang()
+function Laptop(name, price, weight, color) {
+  // public property
+  this.name = name;
+  this.price = price;
+
+  // private property
+  var weight = weight;
+  var color = color;
+
+  // public method
+  this.detail = function () {
+    return this.name + " " + this.price;
+  };
+
+  // private method
+  function showWeightColor() {
+    return `${weight} ${color}`;
+  }
 }
 
+const laptopOne = new Laptop("MSI", 100, 2, "BLUE");
+
+console.log(laptopOne.name);
+console.log(laptopOne.weight);
+console.log(laptopOne.detail);
+// console.log(laptopOne.showWeightColor()) // error message
+
+// PILAR KONSEP OOP
+// Ada 4 konsep dasar yang perlu di pahami saat belajar objek oriented programing.
+
+// Encapsulation
+// Inheritence
+// Polymorphism
+// Abstraction
 
