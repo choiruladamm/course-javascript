@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+  </head>
+  <body>
+    <script>
+      // create constructor function
+      function Person(firstName, lastName) {
+        // create property pada constructor function
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.log(`Hello ${name}, my name is ${this.firstName}`);
+        }
+      }
+
+      // add prototype ke setiap instance object
+      Person.prototype.sayBye = function () {
+        console.log(`Say Bye ${this.firstName}`);
+      }
+
+      Person.prototype.run = function () {
+        console.log(`${this.firstName} is running`);
+      }
+
+      // create object
+      const james = new Person("John", "Doe");
+      // add method ke object instance james
+      // james.sayBye = function () {
+      //   console.log("Say Bye");
+      // } 
+
+      // mendefinisikan ulang prototype
+      james.sayBye = function () {
+        console.log(`Selamat Tinggal ${this.firstName}`);
+      }
+
+      const axe = new Person("Mawar", "Melati");
+
+      console.log(james);
+      console.log(axe);
+
+      // akses ke prototype ke console log
+      james.sayBye();
+      james.run();
+
+      axe.sayBye();
+      axe.run();
+
+    </script>
+  </body>
+</html>
