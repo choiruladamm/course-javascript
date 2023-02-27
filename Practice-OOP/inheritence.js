@@ -18,6 +18,6 @@ class Person extends People {
 
 const luffy = new Person("Monkey D Luffy", 20, "Kapten Bajak Laut"); //intansiasi sebuah project baru
 
-console.log(luffy.name);
-console.log(luffy.age);
-console.log(luffy.job);
+console.log(luffy.name, luffy.age, luffy.job);
+// console.log(luffy.age);
+// console.log(luffy.job);

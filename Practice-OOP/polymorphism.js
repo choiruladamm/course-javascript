@@ -7,11 +7,6 @@
 
 // Jadi fungsi utamanya adalah sebagai alat komunikasi namun dengan cara atau bentuk yang berbeda.
 
-// Polimorfisme pada Java ada dua macam:
-// Static Polymorphism (Polimorfisme statis) : method overloading
-// Dynamic Polymorphism (Polimorfisme dinamis) : method overriding 
-
-
 
 class People {
   constructor(name) {
@@ -25,7 +20,7 @@ class People {
 
 class Person extends People {
   construtor(name) {
-    super(name)
+    super(name);
   }
 
   greet() {
