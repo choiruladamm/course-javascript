@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Templates</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      let header = "Template Literals";
+      let tags = ["lorem 1", "lorem 2", "lorem 3", "lorem 4"];
+
+      let html = `<h2>${header}</h2>`;
+
+      for (const x of tags) {
+        html += `<li>${x}</h2>`;
+      }
+
+      html += `</ul>`
+      document.getElementById("demo").innerHTML = html;
+    </script>
+  </body>
+</html>
