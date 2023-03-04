@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Functions</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      // create array
+      const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+      // call removeNeg
+      const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+      // display
+      document.getElementById("demo").innerHTML = posNumbers;
+
+      // rmeove negative numbers
+      function removeNeg(numbers, callback) {
+        const myArray = [];
+        for (const x of numbers) {
+          if (callback(x)) {
+            myArray.push(x);
+          }
+        }
+        return myArray;
+      }
+    </script>
+  </body>
+</html>
