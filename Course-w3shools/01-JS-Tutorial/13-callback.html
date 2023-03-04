@@ -10,25 +10,37 @@
     <p id="demo"></p>
 
     <script>
-      // create array
-      const myNumbers = [4, 1, -20, -7, 5, 9, -6];
-
-      // call removeNeg
-      const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
-
-      // display
-      document.getElementById("demo").innerHTML = posNumbers;
-
-      // rmeove negative numbers
-      function removeNeg(numbers, callback) {
-        const myArray = [];
-        for (const x of numbers) {
-          if (callback(x)) {
-            myArray.push(x);
-          }
-        }
-        return myArray;
+      function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
       }
+
+      function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+      }
+
+      let result = myCalculator(2, 2);
+      myDisplayer(result);
+
+      // // create array
+      // const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+
+      // // call removeNeg
+      // const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+
+      // // display
+      // document.getElementById("demo").innerHTML = posNumbers;
+
+      // // remove negative numbers
+      // function removeNeg(numbers, callback) {
+      //   const myArray = [];
+      //   for (const x of numbers) {
+      //     if (callback(x)) {
+      //       myArray.push(x);
+      //     }
+      //   }
+      //   return myArray;
+      // }
     </script>
   </body>
 </html>
