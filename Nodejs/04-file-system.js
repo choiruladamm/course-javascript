@@ -26,12 +26,12 @@
 // })
 
 // cara 3
-// var fs = require("fs");
+var fs = require("fs");
 
-// fs.writeFile("example5.txt", "Hello Axell James", function (err) {
-//   if (err) throw err;
-//   console.log("saved file");
-// });
+fs.writeFile("example5.txt", "Hello Axell James", function (err) {
+  if (err) throw err;
+  console.log("saved file");
+});
 
 // TODO: UPDATE FILE
 // var fs = require("fs");
@@ -58,9 +58,9 @@
 // });
 
 // TODO: RENAME FILE
-var fs = require("fs");
+// var fs = require("fs");
 
-fs.rename("summer.txt", "summer.html", function (err) {
-  if (err) throw err;
-  console.log("rename successfully");
-});
+// fs.rename("summer.txt", "summer.html", function (err) {
+//   if (err) throw err;
+//   console.log("rename successfully");
+// });
