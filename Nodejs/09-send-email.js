@@ -1,24 +1,24 @@
-var nodemailer = require("nodemailer");
+// var nodemailer = require("nodemailer");
 
-var transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "",
-    pass: "",
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: "",
+//     pass: "",
+//   },    
+// });
 
-var mailOptions = {
-  from: "",
-  to: "",
-  subject: "Test Sending Email using Node-js",
-  text: "Sangat Mudah",
-};
+// var mailOptions = {
+//   from: "",
+//   to: "",
+//   subject: "Test Sending Email using Node-js",
+//   text: "Sangat Mudah",
+// };
 
-transporter.sendMail(mailOptions, function (error, info) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Email sent: " + info.response);
-  }
-});
+// transporter.sendMail(mailOptions, function (error, info) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("Email sent: " + info.response);
+//   }
+// });
