@@ -1,13 +1,13 @@
 // TODO: READ FILE
-// var http = require("http");
-// var fs = require("fs");
-// http.createServer(function (req, res) {
-//   fs.readFile("example.html", function (err, data) {
-//     res.writeHead(200, { "Content-Type": "text/html" });
-//     res.write(data);
-//     return res.end;
-//   });
-// }).listen(8080);
+var http = require("http");
+var fs = require("fs");
+http.createServer(function (req, res) {
+  fs.readFile("winter.html", function (err, data) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write(data);
+    return res.end;
+  });
+}).listen(8080);
 
 // TODO: CREATE FILE
 // cara 1
@@ -26,12 +26,12 @@
 // })
 
 // cara 3
-var fs = require("fs");
+// var fs = require("fs");
 
-fs.writeFile("example5.txt", "Hello Axell James", function (err) {
-  if (err) throw err;
-  console.log("saved file");
-});
+// fs.writeFile("example5.txt", "Hello Axell James", function (err) {
+//   if (err) throw err;
+//   console.log("saved file");
+// });
 
 // TODO: UPDATE FILE
 // var fs = require("fs");
