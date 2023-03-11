@@ -12,7 +12,7 @@
 // TODO: CREATE FILE
 // cara 1
 // var fs = require("fs");
-// fs.appendFile("example2.txt", "Hello Axell 3", function (err) {
+// fs.appendFile("summer.txt", "", function (err) {
 //   if (err) throw err;
 //   console.log("created file");
 // });
@@ -60,7 +60,7 @@
 // TODO: RENAME FILE
 var fs = require("fs");
 
-fs.rename("example-renamed.html", "example.html", function (err) {
+fs.rename("summer.txt", "summer.html", function (err) {
   if (err) throw err;
   console.log("rename successfully");
 });
